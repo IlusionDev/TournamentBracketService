@@ -28,14 +28,40 @@ Each time a match is set to finished is emitted and event to notify the players 
 
 The platform at this point in every update stats is a waterfall of events, as below:
 
-
-```  
- ┌───────────────────┐ │                   │ │   Update Stat     │ ◄──────────────────────────┐ │                   │                            │ └─────────┬─────────┘                            │ │                                      │ │                                      │ │ All stats finished                   │ │                                      │ │                                      │ ▼                                      │ ┌───────────────────┐                ┌───────────┴───────────────┐ │                   │                │                           │ │  Match finish     │                │ Create next round/matches │ │                   │                │                           │ └─────────┬─────────┘                └───────────────────────────┘ │                                      ▲ │ All matches finished                 │ ▼                                      │ ┌───────────────────┐                            │ │                   │                            │ │ Round finished    ├────────────────────────────┘ │                   │    Is not last round └─────────┬─────────┘ │ │ Last round finished │┌───────────┴───────────┐  
-│                       │  
-│  Torunament finished  │  
-│                       │  
-└───────────────────────┘  
-```  
+```
+  ┌───────────────────┐
+  │                   │
+  │   Update Stat     │ ◄──────────────────────────┐
+  │                   │                            │
+  └─────────┬─────────┘                            │
+            │                                      │
+            │                                      │
+            │ All stats finished                   │
+            │                                      │
+            │                                      │
+            ▼                                      │
+  ┌───────────────────┐                ┌───────────┴───────────────┐
+  │                   │                │                           │
+  │  Match finish     │                │ Create next round/matches │
+  │                   │                │                           │
+  └─────────┬─────────┘                └───────────────────────────┘
+            │                                      ▲
+            │ All matches finished                 │
+            ▼                                      │
+  ┌───────────────────┐                            │
+  │                   │                            │
+  │ Round finished    ├────────────────────────────┘
+  │                   │    Is not last round
+  └─────────┬─────────┘
+            │
+            │ Last round finished
+            │
+┌───────────┴───────────┐
+│                       │
+│  Torunament finished  │
+│                       │
+└───────────────────────┘
+```
 
 Each step have its own checks to know is ready go to next stage like:
 - Are all stats of all players in the match are finished? Update stats process.
