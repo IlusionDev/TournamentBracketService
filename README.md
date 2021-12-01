@@ -76,3 +76,9 @@ Also, in some stages the system can emit events to notify the players, like:
 ## Endpoints
 
 To test the platform, you can import a postman collection file placed in postman directory.
+
+## TODO
+
+- Test all braches
+- Install swagger to generate documentation
+- Finish JWT Auth implementation
