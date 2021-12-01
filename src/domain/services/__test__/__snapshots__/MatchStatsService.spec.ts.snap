@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MatchStatsService saves the first stat of a player in a match 1`] = `
+Object {
+  "match": Object {},
+  "player": Object {
+    "id": "playerId",
+  },
+  "points": 2,
+}
+`;
+
+exports[`MatchStatsService updates stat of a player in a match 1`] = `
+Object {
+  "finished": true,
+  "match": Object {
+    "id": "matchId",
+    "players": Array [
+      Object {
+        "id": "playerId",
+      },
+    ],
+    "round": Object {
+      "finished": false,
+    },
+  },
+}
+`;

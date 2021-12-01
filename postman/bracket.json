@@ -1,0 +1,193 @@
+{
+  "info": {
+    "_postman_id": "21cf9d0f-2a31-461b-9d55-ff2a052bc4a0",
+    "name": "BracketServ",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Bracket Start",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"bracketId\": \"5153dda3-e8c7-4006-9239-6dd08ffbf6d1\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8000/bracket/start",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "bracket",
+            "start"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create bracket",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"reward\": 234334,\n    \"price\": 10,\n    \"ticketSlots\": 32\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8000/bracket",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "bracket"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create player",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"email\": \"test@test.com\",\n    \"password\": \"\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8000/player",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "player"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Enter a torunament",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"playerId\": \"abc46370-1acc-4342-80ab-34c438a4f19b\",\n    \"bracketId\": \"5153dda3-e8c7-4006-9239-6dd08ffbf6d1\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8000/bracket/enter",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "bracket",
+            "enter"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create stats",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n        \"playerId\": \"457c0944-5ff0-474a-a2cb-ea7d55f4af3c\",\n    \"bracketId\": \"5d8afc40-ed66-4286-8802-8fcb9c29af6c\",\n    \"points\": 12\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8000/match/stats",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "match",
+            "stats"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update stats",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"id\": \"45cfbddf-20ea-408c-8e72-3eb38fce5480\",\n    \"points\": 2000234\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "localhost:8000/match/stats",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "match",
+            "stats"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get all Brackets",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "localhost:8000/bracket",
+          "host": [
+            "localhost"
+          ],
+          "port": "8000",
+          "path": [
+            "bracket"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
